@@ -52,11 +52,11 @@ _"Un groupe, c'est fait pour agir."_
 #definition[
   Un *groupe* G est un ensemble muni d'une loi de composition interne (lci), notée "$.$", telle que :
   - $.$ est associative : $forall g, h, k in G, (g . h) . k = g . (h . k) = g . h . k$
-  - Il existe un élément neutre : $exists e in G, forall g in G, e . g = g . e = g$ 
-    
+  - Il existe un élément neutre : $exists e in G, forall g in G, e . g = g . e = g$
+
     (on la note parfois $1$, $1_G$, $0$, ou $id$)
   - Tous les éléments possèdent un inverse : $forall g in G, exists h in G, g . h = h . g = e$.
-    
+
     Ce $h$ est automatiquement unique, et on le note $g^(-1)$ ou $-g$ selon si l'on est en notation multiplicative ou additive.
 
   On ne demande pas la commutativité, sinon on parle de groupe _commutatif_ ou _abélien_.
@@ -73,7 +73,7 @@ _"Un groupe, c'est fait pour agir."_
 
   - Toute une galaxie de variantes obtenues en demandant de respecter une structure sur $X$ :
     - Pour $X$ un espace topologique, $hom(X) = {f in SSSSS(X) | f,f^(-1) "continues"}$
-    - Pour $X$ un espace métrique, $"isom"(X) = $ groupe des isométries de $X --> X$.
+    - Pour $X$ un espace métrique, $"isom"(X) =$ groupe des isométries de $X --> X$.
     - Pour $E$ un espace vectoriel, le groupe général linéaire $GL(E) = {f in SSSSS(E), f "linéaire"}$
 ]
 
@@ -100,12 +100,12 @@ _"Un groupe, c'est fait pour agir."_
 #example[
   $(ZZ sur n ZZ,+)$ agit sur le plan par rottions d'angles multiples de $(2 pi)/n$
 
-  C'est-à-dire qu'on regarde $k^F mapsto "Rot"(D,(2 k pi)/n)$ rotation de centre $D$ d'angle $(2 k pi)/n$, un morphisme de $ZZ sur n ZZ$ dans $cases(SSSSS("plan"),GL_2(RR))$
+  C'est-à-dire qu'on regarde $k^F mapsto "Rot"(D,(2 k pi)/n)$ rotation de centre $D$ d'angle $(2 k pi)/n$, un morphisme de $ZZ sur n ZZ$ dans $cases(SSSSS("plan"), GL_2(RR))$
 ]
 
 *Deux intérêts duaux* :
-  - On peut faire ça pour mieux cmprendre notre groupe
-  - Pour comprendre les symétries d'un ensemble donné.
+- On peut faire ça pour mieux cmprendre notre groupe
+- Pour comprendre les symétries d'un ensemble donné.
 
 #example[
   Les isométries d'un tétrahèdre régulier forment un groupe isomorphe à $SSSSS_4$
@@ -118,7 +118,7 @@ _"Un groupe, c'est fait pour agir."_
 
   Une *action* (à gauche) de $G$ sur $X$ est une loi de composition :
   $
-  application(G times X,X,(g,x),g . x)
+    application(G times X, X, (g,x), g . x)
   $
 
   satisfaisant :
@@ -131,15 +131,15 @@ _"Un groupe, c'est fait pour agir."_
 ]
 
 #proof[
-  À une action $G agit X$ on associe le morphisme $phi : application(G,SSSSS(X),g,(x in X mapsto g . x in X))$
+  À une action $G agit X$ on associe le morphisme $phi : application(G, SSSSS(X), g, (x in X mapsto g . x in X))$
 
-  Soient $g,h in G$, 
+  Soient $g,h in G$,
   - montrons que $phi(g h) = phi(g) compose phi(h)$
 
     Soit $x in X$. Alors $phi(g h)(x) = (g h) . x$ et $[phi(g)phi(h)](x) = phi(g) (phi(h)(x)) = phi(g)(h . x) = g . (h . x)$.
 
     Par le premier axiome, on a l'égalité.
-  -  De la même façon, en utilisant le second axiome, on montre que $phi(1_G) = id_X$ (exo)
+  - De la même façon, en utilisant le second axiome, on montre que $phi(1_G) = id_X$ (exo)
 
 
   On en déduit que $phi(g)$ est bien une bijection pour tout $g$. En effet, $phi(g)phi(g^(-1)) = phi(g g^(-1)) = phi(1_G) = Id_X$
@@ -168,15 +168,11 @@ _"Un groupe, c'est fait pour agir."_
 
   Soit $k in [n]$ et notons $PPP_k (n)$ l'ensemble des parties à $k$ éléments de $n$.
 
-  L'action tautologique de $SSSSS_n$ induit une action $
-  SSSSS_n agit PPP_k (n)
-  $ donné par : $
-  forall sigma in SSSSS_n, forall I in PPP_k (n), sigma . I = sigma(I)
-  $ (comme $sigma$ est bijective, $sigma(I)$ est de même cardinal que $I$)
+  L'action tautologique de $SSSSS_n$ induit une action $ SSSSS_n agit PPP_k (n) $ donné par : $ forall sigma in SSSSS_n, forall I in PPP_k (n), sigma . I = sigma(I) $ (comme $sigma$ est bijective, $sigma(I)$ est de même cardinal que $I$)
 
-  De cette façon, on obtient un morphisme $SSSSS_n --> SSSSS(PPP_k (n))$ où $PPP_k (n)$ est de cardinal $binom(n,k)$
+  De cette façon, on obtient un morphisme $SSSSS_n --> SSSSS(PPP_k (n))$ où $PPP_k (n)$ est de cardinal $binom(n, k)$
 
-  C'est-à-dire : $SSSSS_n --> SSSSS_(binom(n,k))$, lui est bien nouveau (et non tautologique).
+  C'est-à-dire : $SSSSS_n --> SSSSS_(binom(n, k))$, lui est bien nouveau (et non tautologique).
 ]
 
 #example[
@@ -187,14 +183,14 @@ _"Un groupe, c'est fait pour agir."_
 
   On prend $X$ l'ensemble des grandes diagonales du cube. Celles qui joignent deux sommets opposés.
 
-  $Card(X) = 4$. 
-  
+  $Card(X) = 4$.
+
   Une isométrie de $C$ doit envoyer toute grande diagonale sur une grande diagonale. On obtient ainsi une action $G agit X$, soit de maniére équivalente, un morphisme $phi : G --> SSSSS_4$.
 
   On montre que (on le fera un jour) :
   - $phi$ est surjectif
   - $ker(phi) isommorphic ZZ sur 2 ZZ$ (engendré par la symétrie centrale ce centre Le centre de $C$)
-  
+
   Ceci permettra de montrer que $"Isom"(C) isommorphic SSSSS_4 times ZZ sur 2 ZZ$
 
 ]
@@ -207,16 +203,16 @@ _"Un groupe, c'est fait pour agir."_
 
   Soit $V$ un espace vectoriel, $G = GL(V)$. Notons $PP(V)$ l'ensemble des droites vectorielles de $V$.
 
-  Par définition, $G$ est un sous-groupe de $SSSSS(V)$, donc on a une action (tautologique) $G agit V$ 
+  Par définition, $G$ est un sous-groupe de $SSSSS(V)$, donc on a une action (tautologique) $G agit V$
 
-  $G underbrace(<,"sous-groupe") SSSSS(V)$ donc on a un morphisme injectif $ j : application(G,SSSSS(V),g,g) $ l'action tautologique $G agit V$ est celle correspondant au morphisme $j$.
+  $G underbrace(<, "sous-groupe") SSSSS(V)$ donc on a un morphisme injectif $ j : application(G, SSSSS(V), g, g) $ l'action tautologique $G agit V$ est celle correspondant au morphisme $j$.
 
   Autrement dit : $forall f in GL(V), f in Lin(V)$. $forall x in V : f . x = f(x)$
 
-  L'action tautologique induit une action sur $PP(V)$ : $forall f in GL(V), forall W in PP(V) = f.W = f(W)$. 
-  
-  $(i)$ : Comme $f$ est linéaire : $W$ sev $==> f(W)$ sev. 
-  
+  L'action tautologique induit une action sur $PP(V)$ : $forall f in GL(V), forall W in PP(V) = f.W = f(W)$.
+
+  $(i)$ : Comme $f$ est linéaire : $W$ sev $==> f(W)$ sev.
+
   $(i i)$ : Puisque $f$ est un isomorphisme, $dim(f(W)) = dim(W)$
 
   En utilisant $(i) + (i i)$ : Si $W$ sev tq $dim(W) = 1$, alors $dim(f(W)) = 1$.
@@ -224,11 +220,11 @@ _"Un groupe, c'est fait pour agir."_
   #underline[Exo] : Ceci définit une action.
 
   - $GL(V) agit V$ est fidèle. En effet :
-    
+
     Soit $f in GL(V)$ tel que $forall x in V, f.x = x$.
 
     De maniere équivalente : $forall x in V : f(x) = x$. Donc $f = Id_V = 1_(GL(V))$
-  
+
   - $GL(V) agit PP(V)$ n'est pas fidèle :
 
     Soit $lambda in.not {0,1}$ un scalaire et posons $f = lambda id_V in GL(V)$ qui est une homothétie donc un isomorphisme.
@@ -244,7 +240,7 @@ _"Un groupe, c'est fait pour agir."_
 #definition[
   Une action $G agit X$ est *transitive* si :
   $
-  forall x,y in X, exists g in G "tq" g.x = y
+    forall x,y in X, exists g in G "tq" g.x = y
   $
 
   Attention : La transitivité n'est pas équivalente à la surjectivité $phi : G --> SSSSS(X)$
@@ -268,13 +264,13 @@ _"Un groupe, c'est fait pour agir."_
 
     On complète $(u)$ d'une part et $(v)$ d'autre part en deux bases $(u_1,dots,u_n)$ et $(v_1,dots,v_n)$.
 
-    "On sait bien que" : 
+    "On sait bien que" :
 
     Il existe un unique isomorphisme linéaire $f : V --> V$ tel que $f(u) = v$, $f(u_i) = v_i$,$forall i = ,...,n$.
 
-    Cet $n$ est tel que $f(E) = f(Vect(u)) = E = Vect(v)$. Donc $f . E = F$ et l'action est bien transitive. 
+    Cet $n$ est tel que $f(E) = f(Vect(u)) = E = Vect(v)$. Donc $f . E = F$ et l'action est bien transitive.
 
-  - Considérons à présent $X = $ le plan affine, $G = $ le groupe des transformations affines de $X$
+  - Considérons à présent $X =$ le plan affine, $G =$ le groupe des transformations affines de $X$
 
     ("Le groupe des bijections de $X$ préservant l'alignement", par exemple les translations, rotations, homothéties, réflexions et leurs composées)
 
@@ -303,7 +299,7 @@ _"Un groupe, c'est fait pour agir."_
 
   #underline[Exo : ] Montrer que c'est bien une action.
 
-  Alors $OOO_z = $ le cercle centré en l'origine passant par $z$.
+  Alors $OOO_z =$ le cercle centré en l'origine passant par $z$.
 
   // TODO: Faire l'illustration
 
@@ -319,7 +315,7 @@ _"Un groupe, c'est fait pour agir."_
 ]
 
 #remark("Rappel")[
-  Une partition de $X$ est une famille $(Z_i)_(i in I)$ de sous-ensemble non-vides de $X$ tel que : 
+  Une partition de $X$ est une famille $(Z_i)_(i in I)$ de sous-ensemble non-vides de $X$ tel que :
   + $X = bigunion_(i in I) Z_i$
   + $forall i,j in I : i != j ==> Z_i inter Z_j = emptyset$
 ]
@@ -328,15 +324,17 @@ _"Un groupe, c'est fait pour agir."_
   Soient $omega$ une orbite, $x in omega$. Alors $omega = OOO_x$.
 ]
 
-#proof("du lemme")[ $omega$ est une orbite donc il existe $y in X$ tel que $omega = OOO_y$. On veut montrer que $OOO_x = OOO_y$.
+#proof(
+  "du lemme",
+)[ $omega$ est une orbite donc il existe $y in X$ tel que $omega = OOO_y$. On veut montrer que $OOO_x = OOO_y$.
 
-On a $x in O_y$ donc il existe $g in G$ tel que $x = g . y$
+  On a $x in O_y$ donc il existe $g in G$ tel que $x = g . y$
 
-Montrons que $OOO_x subset OOO_y "puis" OOO_y subset OOO_x$ : 
+  Montrons que $OOO_x subset OOO_y "puis" OOO_y subset OOO_x$ :
 
-Soit $z in OOO_x$. Alors il existe $h in G$ tel que $z = h . x = h . (g . y) = h g . y$ donc $z in OOO_y$. 
+  Soit $z in OOO_x$. Alors il existe $h in G$ tel que $z = h . x = h . (g . y) = h g . y$ donc $z in OOO_y$.
 
-Soit $z in OOO_y$. Alors $exists h : z = h . y$. $x = g.y <==> y = g^(-1)x$ donc $z = h.(g^(-1) . x) = h g^(-1) . x$ et ainsi $z in OOO_x$.
+  Soit $z in OOO_y$. Alors $exists h : z = h . y$. $x = g.y <==> y = g^(-1)x$ donc $z = h.(g^(-1) . x) = h g^(-1) . x$ et ainsi $z in OOO_x$.
 ]
 
 #proof[
@@ -353,7 +351,7 @@ Soit $z in OOO_y$. Alors $exists h : z = h . y$. $x = g.y <==> y = g^(-1)x$ donc
 #remark[
   Les orbites de $G agit X$ sont les classes d'equivalences de la relation d'équivalence $RRR$ :
   $
-  forall x,y in X : x RRR y <==> exists g in G "tel que " y = g . x 
+    forall x,y in X : x RRR y <==> exists g in G "tel que " y = g . x
   $
 ]
 
@@ -388,7 +386,7 @@ Soit $z in OOO_y$. Alors $exists h : z = h . y$. $x = g.y <==> y = g^(-1)x$ donc
 #definition[
   On appelle action par conjugaison de $G$ l'action $G agit G$ définie par :
   $
-  forall g in G quad forall h in G quad g.h = g h g^(-1)
+    forall g in G quad forall h in G quad g.h = g h g^(-1)
   $
 ]
 
@@ -410,7 +408,7 @@ Soit $z in OOO_y$. Alors $exists h : z = h . y$. $x = g.y <==> y = g^(-1)x$ donc
 ]
 
 #example[
-  Si $T = $ transposition, h = $mat(1,2)$, $D = $le support ${1,2}$. $g h g^(-1)$ est la transposition de support ${g(1),g(2)}$
+  Si $T =$ transposition, h = $mat(1, 2)$, $D =$le support ${1,2}$. $g h g^(-1)$ est la transposition de support ${g(1),g(2)}$
 ]
 
 #example[
@@ -418,7 +416,7 @@ Soit $z in OOO_y$. Alors $exists h : z = h . y$. $x = g.y <==> y = g^(-1)x$ donc
 
   $s in GL(V)$ défini par : $forall x in E, y in F, quad s(x+y) = x - y$. C'est une symétrie par rapport à $E$ dans la direction de $F$.
 
-  Alors $T = $ symétrie par rapport à un sev de $V$ de dimension $p$ et $D = (E,F)$.
+  Alors $T =$ symétrie par rapport à un sev de $V$ de dimension $p$ et $D = (E,F)$.
 
   Pour $g in GL(V)$ : $g s g^(-1)$ est la symétrie par rapport à $g(E)$ dans la direction de $g(F)$.
 
@@ -446,8 +444,8 @@ Soit $A$ un anneau intègre (dont le seul diviseur de $0$ est $0$) et commutatif
 
 Soit $~$ la relation sur $A times (A without {0})$ définie par :
 $
-forall (a,b), (a^',b^') in A times A times (A without {0}) = QQQ \
-(a,b) ~ (a^',b^') <==> a b^' = a^' b
+  forall (a,b), (a^',b^') in A times A times (A without {0}) = QQQ \
+  (a,b) ~ (a^',b^') <==> a b^' = a^' b
 $
 
 C'est une relation d'équivalence
@@ -485,8 +483,105 @@ On va munir $Frac(A)$ de deux opérations $+$ et $times$.
 
 + On définit $a/b times c/d = (a c)/(b d)$.
 
-  Remarque : si $(a,b),(c,d) in QQQ$, on a $b != 0$ et $d != 0$ donc $ b d != 0$ car $A$ intègre, ainsi on a bien $(a c, b d) in QQ$
+  Remarque : si $(a,b),(c,d) in QQQ$, on a $b != 0$ et $d != 0$ donc $b d != 0$ car $A$ intègre, ainsi on a bien $(a c, b d) in QQ$
 
   Vérifions que ca ne dépend pas des choix des représentants.
 
-  Soient $(a,b),(a^',b^') in QQQ$ tels que $a/b = a^'/b^', c/d = c^'/d^'$. Montrons que $(a c)/(b d) = (a^' c^')/(b^' d^')$
+  Soient $(a,b),(a^',b^') in QQQ$ tels que $a/b = a^'/b^', c/d = c^'/d^'$. Montrons que $(a c)/(b d) = (a^' c^')/(b^' d^') <==> a c b^' d^' = a^' b c^' d$ qui est bien vrai.
+
+- Pour $A$ un anneau intègre commutatif, $(Frac(A),+,times)$ est un anneau :
+  - $(Frac(A),+)$ est un neutre.
+  - Élément neutre : $(0_A)/(1_A)$
+  - $+$ est associative (exo)
+  - Tout $a/b in Frac(A)$ a un inverse pour $+$, c'est $-a/b$
+  - $times$ sur $Frac(A)$ est associative : soit $a/b, c/d, e/f in Frac(A)$.
+    Alors $a/b times (c/d times e/f) = (a/b times c/d) times e/f <==> a/b times (c e)/(d f) = (a c)/(b d) times e/f <==> (a(c e))/(b(d f)) = ((a c)e)/((b d)f) <==> ((a c) e)/((b d) f) = ((a c) e)/((b d) f)$
+  - $+$ et $times$ sont toutes les deux commutatives (exo)
+  - distributivité (exo)
+  - Pour tout $x in Frac(A)$ non-nul, si $x != 0$, alors il est inversible par $times$ :
+    Soit $x = a/b in Frac(A)$. On a $a != 0$ si $x != 0$, alors $b/a in Frac(A)$ est l'inverse de $x = a/b$.
+
+#example[
+  Définissons $f : application(Frac(ZZ), ZZ, a/b, a)$, ça ne marche pas ! : $f(1/2) = 1$ mais $f(2/4) = 2$
+]
+
+Autre exemple de quotient :
+On va définir un vecteur $arrow(A B)$ comme classe d'équivalence de la paire de points $(A,B)$.
+
+#definition[
+  Soit $AA^2$ le plan affine. Deux paires de points $(A,B)$ et $(C,D)$ sont équipollentes si $A B C D$ est un parallélogramme.
+
+  On note $arrow(A B)$ la classe d'équipollence de $(A,B)$ et on appelle ça un vecteur.
+
+  Il faut vérifier que c'est bien une relation d'équivalence.
+]
+
+== Congruence modulo un sous-groupe (rappels)
+
+Soit $G$ un groupe, $H < G$.
+
+#definition[
+  Soit $g,g^' in G$. $g,g^'$ sont *congrus* modulo $H$ s'il existe $h in H$ tel que $g^' = g h$
+]
+
+#example[
+  $G = ZZ$, $H = n ZZ$, les entiers divisibles par $n$.
+
+  Pour $a,b in ZZ$, $a,b$ sont congrus modulo $n ZZ$ ssi $exists h in n ZZ$ tels que $b = a + h$ ssi $n$ divise $b-a$ ssi $a$ et $b$ sont congrus modulo $n$.
+]
+
+#proposition[
+  La relation de congruence modulo un sous-groupe est une relation d'équivalence.
+
+  On note $G sur H$ le quotient de $G$ par cette relation d'équivalence.
+]
+
+#remark[
+  En général, $G sur H$ n'est pas un groupe.
+]
+
+#exercice[Si $G$ est fini, utiliser le quotient $G sur H$ pour montrer $[H] | [G]$ (thm de Lagrange). Dans ces conditions, $Card(G/H) = ([G])/([H])$]
+
+Retours aux actions de groupe 😊😊😁😁😁😁
+
+Pour $G$ un groupe $X$ un ensemble et $G agit X$
+
+On va voir, pour tout $x in X$, une expression de $OOO_x = {g.x | g in G}$ comme quotient de $G$ par un sous-groupe.
+
+#definition[
+  Soit $x in X$. Le *stabilisateur* de $x$ est : $ Stab(x) = {g in G, g.x = x} $
+]
+
+#proposition[
+  Pour tout $x$, $Stab(x)$ est un sous-groupe de $G$.
+]
+
+#proof[
+  Soit $x in X$.
+
+  - $1_G in Stab(x)$ car $1_G . x = x$
+  - Soient $g,g^' in Stab(x)$, alors $g g^' . x = g . (g^' . x) = g . x = x$
+  - Soit $g in G$, On $g . x = x <==> g^(-1).(g.x) = g^(-1).x <==> g^(-1)g.x = g^(-1).x <==> x = g^(-1).x$. D'où $g^(-1) in Stab(x)$
+
+]
+
+#proposition[
+  Soit $G agit X$ notre action. Soit $x in X$.
+
+  L'application $ Phi : application(G sur Stab(x), OOO_x, bar(g), g.x) $ est bien définie et bijective.
+]
+
+#proof[
+  Montrons que la définition ne dépend pas du choix du représentant.
+
+  Soit $g,g^' in G$ tels que $bar(g) = bar(g^')$. Montrons que $g.x = g^' . x$
+
+  $bar(g) = bar(g^') <==> g equiv g^' mod(Stab(x)) <==> exists h in Stab(x), g^' = g h$
+
+  On a alors : $g^' . x = g h . x = g . (h . x) = g . x$ car $h in Stab(x)$.
+
+  On a bien $g^' . x = g . x$
+
+  Reste à montrer que cette application (qu'on sait désormais définie) est bijective.
+  - Surjectivité : soit $y in OOO_x$. Par définition de l'orbite, $exists g in G, y = g . x$, $g . x = Phi(bar(g))$, donc $y = phi(bar(g))$ et ainsi $Phi$ est bien surjective.
+]
